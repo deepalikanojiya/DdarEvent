@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DdarEvents - Service Gallery | Wedding, Corporate, Party & Music Events</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore DdarEvents' curated gallery of weddings, corporate events, parties, and music carnivals. Unleash magical celebrations with elegance and style.">
+  <meta name="keywords" content="DdarEvents, event planner, wedding gallery, corporate event, party decor, music carnivals, event highlights">
+  <meta name="author" content="DdarEvents Team">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ddarevents.com/service-gallery.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Fonts & bxSlider -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DdarEvents",
+    "url": "https://ddarevents.com",
+    "logo": "https://ddarevents.com/logo.png",
+    "description": "DdarEvents offers premium wedding, corporate, party, and music event planning and decor services.",
+    "sameAs": [
+      "https://www.instagram.com/ddarevents",
+      "https://www.facebook.com/ddarevents"
+    ]
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #740040;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .section-wrapper {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #740040;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .bx-wrapper {
+      border: none !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .bxslider img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #740040;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      h2 { font-size: 28px; }
+      p { font-size: 16px; }
+      .bxslider img { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DdarEvents - Event Highlights</h1>
+  </header>
+
+
+  <!-- Wedding Section -->
+  <div class="section-wrapper" id="Wedding">
+    <h2>Wedding Events</h2>
+    <p>Making your special day truly unforgettable with elegance and charm.</p>
+    <ul class="bxslider">
+      <li><img src="image/wedding7.jpg" alt="Traditional Indian wedding setup" /></li>
+      <li><img src="image/wedding1.jpg" alt="Elegant floral mandap decor" /></li>
+      <li><img src="image/wedding8.jpg" alt="Outdoor wedding celebration" /></li>
+      <li><img src="image/wedding6.jpg" alt="Bride and groom entrance stage" /></li>
+    </ul>
+  </div>
+
+  <!-- Corporate Section -->
+  <div class="section-wrapper" id="Corporate">
+    <h2>Corporate Events</h2>
+    <p class="description">Professional setups for launches, summits, and corporate retreats with top-class hospitality.</p>
+    <ul class="bxslider">
+      <li><img src="image/corporate1.jpg" alt="Corporate seminar hall with lighting" /></li>
+      <li><img src="image/corporate3.jpg" alt="Award ceremony setup" /></li>
+      <li><img src="image/corporate2.png" alt="Product launch event decor" /></li>
+      <li><img src="image/corporate4.jpg" alt="Professional networking space" /></li>
+    </ul>
+  </div>
+
+  <!-- Party Section -->
+  <div class="section-wrapper" id="Party">
+    <h2>Party Decor</h2>
+    <p class="description">Vibrant themes for birthdays, baby showers, and personal celebrations.</p>
+    <ul class="bxslider">
+      <li><img src="image/party13.jpg" alt="Birthday bash balloon decor" /></li>
+      <li><img src="image/party10.jpg" alt="Kids party theme setup" /></li>
+      <li><img src="image/party8.jpg" alt="Elegant indoor party decor" /></li>
+      <li><img src="image/party11.jpg" alt="Colorful lighting and props" /></li>
+    </ul>
+  </div>
+
+  <!-- Music Section -->
+  <div class="section-wrapper" id="Music">
+    <h2>Music Carnivals</h2>
+    <p class="description">Electrifying music nights with professional sound and crowd energy.</p>
+    <ul class="bxslider">
+      <li><img src="image/music1.jpg" alt="Live concert stage with lights" /></li>
+      <li><img src="image/music3.jpg" alt="DJ event lighting setup" /></li>
+      <li><img src="image/music6.jpg" alt="Crowd enjoying the concert" /></li>
+      <li><img src="image/music2.jpg" alt="Artist performing on stage" /></li>
+    </ul>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top">↑</button>
+
+  <!-- jQuery & bxSlider -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.bxslider').bxSlider({
+        auto: true,
+        pause: 3000,
+        mode: 'fade',
+        captions: false,
+        adaptiveHeight: true
+      });
+    });
+
+    // Back to Top
+    window.onscroll = function() {
+      document.getElementById("backToTop").style.display =
+        window.scrollY > 400 ? "block" : "none";
+    };
+
+    document.getElementById("backToTop").onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>

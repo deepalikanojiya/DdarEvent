@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Meet Devesh Dobariya, the founder of DdarEvents - your expert in planning weddings, parties, and ceremonies with creative flair and precision." />
+  <meta name="keywords" content="DdarEvents, Founder, Devesh Dobariya, Event Planner, Wedding Planner, Mumbai Events" />
+  <meta name="author" content="DdarEvents" />
+  <title>DdarEvents | Founder - Devesh Dobariya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+        body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('image/background.jpg') center/cover no-repeat;
+      opacity: 0.4;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.85));
+      z-index: -1;
+    }
+
+
+
+    nav {
+      background-color: #740040;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      height: 60px;
+      object-fit: contain;
+    }
+
+    nav h1 {
+      color: #FDD4CC;
+      font-size: 26px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      background: none;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    .nav-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      display: block;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff6700;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 8px 16px;
+    }
+
+    nav ul li a.active {
+      background-color: #F7C39C;
+      color: #000;
+    }
+
+    .main-content {
+      text-align: center;
+      padding: 80px 24px 40px;
+    }
+
+    .main-content h2 {
+      font-size: 42px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+      color: #F7C39C;
+    }
+
+    .main-content img {
+      border-radius: 50%;
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      border: 5px solid #EBC67A;
+      transition: transform 0.3s ease;
+      margin-bottom: 24px;
+    }
+
+    .main-content img:hover {
+      transform: scale(1.05);
+    }
+
+    .main-content p {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 24px;
+      border-radius: 16px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content p strong {
+      color: #026758;
+    }
+
+    .main-content p em {
+      color: #740040;
+      font-style: italic;
+      display: block;
+      margin-top: 16px;
+      font-size: 17px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 24px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 16px 20px;
+        border-radius: 12px;
+        gap: 1rem;
+        width: 180px;
+        transition: all 0.3s ease;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .main-content h2 {
+        font-size: 32px;
+      }
+
+      .main-content img {
+        width: 160px;
+        height: 160px;
+      }
+
+      .main-content p {
+        font-size: 16px;
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="image/logo.png" alt="DdarEvents Logo" class="logo" />
+      <h1>DdarEvents</h1>
+    </div>
+    <div class="nav-toggle" id="navToggle" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="founder.html" class="active">Founder</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Founder Section -->
+  <section class="main-content">
+    <h2>Our Founder</h2>
+    <img src="image/founder.jpeg" alt="Devesh Dobariya - Founder of DdarEvents" />
+    <p>
+      Meet <strong>Devesh Dobariya</strong>, the visionary behind <strong>DdarEvents</strong>.
+      We specialize in crafting memorable events that celebrate life’s most cherished moments.
+      From elegant wedding anniversaries and joyful birthday parties to heartfelt name ceremonies,
+      we turn your dreams into beautifully executed reality.
+      Whether you're in the heart of Mumbai or planning something special out of town, we bring creativity,
+      precision, and passion to every event we manage.
+      <em>Let us turn your special occasion into an unforgettable experience.</em>
+    </p>
+  </section>
+
+  <!-- Toggle Script -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
+</body>
+</html>

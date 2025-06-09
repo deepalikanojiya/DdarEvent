@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DdarEvents | Event Organizer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="DdarEvents is your premium event management partner for magical weddings, corporate events, and vibrant music carnivals." />
+  <meta name="keywords" content="Event Management, Wedding Planner, Music Events, DdarEvents, Corporate Events" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="DdarEvents Team" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header.hero {
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85)),
+        url('image/background.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand .logo {
+      height: 50px;
+    }
+
+    .brand h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      background-color: #ff6700;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid #fff;
+    }
+
+    .hero-content {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 10%;
+      padding: 0 2rem;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      background: rgba(255, 255, 255, 0.2);
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 30px;
+      margin-bottom: 1.2rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #e0e0e0;
+    }
+
+    .btn.primary {
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      background-color: #ff6700;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn.primary:hover {
+      background-color: #ffa54f;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+        z-index: 2000;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 24px;
+        background: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        gap: 1rem;
+        padding: 16px 20px;
+        border-radius: 12px;
+        display: none;
+        width: 180px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li a {
+        padding: 8px 10px;
+      }
+
+      /* Shift hero-content upward on mobile */
+      .hero-content {
+        margin-top: 10vh !important;
+        margin-bottom: auto !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .btn.primary {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="brand" data-aos="fade-right">
+        <img src="image/logo.png" alt="DdarEvents Logo" class="logo" />
+        <h1>DdarEvents</h1>
+      </div>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu Toggle" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="navLinks" data-aos="fade-left">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="founder.html">Founder</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content" data-aos="zoom-in">
+      <span class="tagline">MAGICAL CELEBRATIONS</span>
+      <h1>Unleash The Magic Of Events</h1>
+      <p>Welcome to DdarEvents – where elegance meets entertainment. Join us for spectacular music carnivals, weddings, and more!</p>
+      <a href="event.html" class="btn primary">Explore Events</a>
+    </div>
+  </header>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Toggle Menu Script -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
+
+  <!-- SEO Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "DdarEvents Magical Weddings & Corporate Events",
+      "startDate": "2025-11-01",
+      "endDate": "2025-11-05",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Mumbai Event Hall",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Main Street",
+          "addressLocality": "Mumbai",
+          "addressRegion": "MH",
+          "postalCode": "400001",
+          "addressCountry": "IN"
+        }
+      },
+      "image": [
+        "https://ddarevents.com/image/background.jpg"
+      ],
+      "description": "Join us at DdarEvents for breathtaking weddings, professional corporate experiences, and vibrant carnivals.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "DdarEvents",
+        "url": "https://ddarevents.com"
+      }
+    }
+  </script>
+</body>
+</html>
